@@ -12,10 +12,14 @@ jobs:
   build:
 
     runs-on: ubuntu-latest
-  
+    env: 
+      TEST_PATH: '_site'
     steps:
       - uses: actions/checkout@v3
       - name: debug path
         run: echo $GITHUB_WORKSPACE$TEST_PATH
-        env: 
-          TEST_PATH: '/Lazer_Eyes/Docs/Docs.csproj'
+
+      - name: Deploy to GitHub Pages
+        uses: JamesIves/github-pages-deploy-action@v4.4.1
+        with:
+          folder: $TEST_PATH
