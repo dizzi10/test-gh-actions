@@ -18,4 +18,4 @@ jobs:
       - name: debug path
         run: echo $TEST_PATH
         env: 
-          TEST_PATH: '$GITHUB_WORKSPACE/Lazer_Eyes/Docs/Docs.csproj'
+          TEST_PATH: $GITHUB_WORKSPACE+'/Lazer_Eyes/Docs/Docs.csproj'
