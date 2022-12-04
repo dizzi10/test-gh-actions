@@ -15,5 +15,5 @@ jobs:
   
     steps:
       - uses: actions/checkout@v3
-      - name debug path
+      - name: debug path
         run: echo $GITHUB_WORKSPACE
